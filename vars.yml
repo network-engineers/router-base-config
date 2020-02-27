@@ -2,6 +2,6 @@
 - hostname: testrouter123
   int: GigabitEthernet0/0/1
   sub_int_id: 50
-  ckt_id: MLEC765056
-  isp: ATT
+  ckt_id: ABC12345
+  isp: ISP1
   store: 4565
