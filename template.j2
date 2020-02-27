@@ -1,0 +1,22 @@
+interface {{ int }}
+  description {{ vendor }} CircuitID Num:{{ ckt_id }} ATI
+  bandwidth 1000
+  no ip address
+  ip flow monitor FLOWMONITOR1 input
+  ip flow monitor FLOWMONITOR1 output
+  negotiation auto
+  shutdown
+
+interface {{ int }}.{{ sub_int_id }}
+  description {{ vendor }} CircuitID Num:{{ ckt_id }} ATI
+  bandwidth 1000
+  encapsulation dot1Q {{ sub_int_id }}
+  ip address {{ ip_add }} 255.255.255.252
+  ip flow monitor FLOWMONITOR1 input
+  ip flow monitor FLOWMONITOR1 output
+
+router bgp 65530
+  bgp log-neighbor-changes
+  neighbor {{ neighbor }} remote-as 13979
+  neighbor {{ neighbor }} soft-reconfiguration inbound
+  neighbor {{ neighbor }} route-map Default_Only in

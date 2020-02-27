@@ -1,0 +1,7 @@
+---
+- hostname: testrouter123
+  int: GigabitEthernet0/0/1
+  sub_int_id: 50
+  ckt_id: MLEC765056
+  isp: ATT
+  store: 4565
