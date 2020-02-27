@@ -5,5 +5,5 @@
 
 Steps:
 - Enter variables in 'vars.yml'
-- When in same directory as 'router-config.py', enter [python router-config.py]
+- When in same directory as 'router-config.py', enter 'python router-config.py'
 - Router configurations will be saved in 'configs' directory
